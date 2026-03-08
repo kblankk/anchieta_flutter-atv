@@ -21,8 +21,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final TextEditingController _controller = TextEditingController();
-  String _nomeUsuario = "";
 
   @override
   Widget build(BuildContext context) {
@@ -31,21 +29,9 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(title: Text('Olá Flutter')),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(
-                // 3. Vincule o controlador ao TextField
-                controller: _controller,
-                decoration: const InputDecoration(
-                  labelText: 'Digite seu nome',
-                  border: OutlineInputBorder(),
-                ),
-                // 4. Atualize a variável sempre que o texto mudar
-                onChanged: (valor) {
-                  setState(() {
-                    _nomeUsuario = valor;
-                  });
-                },
-              ),
+ 
             ],
           ),
         ),
